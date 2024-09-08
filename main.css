@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, lightblue, white, lightgreen);
+}
+
+.head {
+    grid-area: head;
+    font-size: 4vw;
+    text-align: center;
+    text-shadow: 4px 3px 8px gray;
+}
+.menu { grid-area: menu; padding: 10px; }
+.content { grid-area: main; height:100%; }
+.footer { grid-area: foot; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'head head head head head'
+    'menu main main main main'
+    'menu foot foot foot foot';
+  grid-template-rows: min-content auto min-content;
+  grid-template-columns: min-content auto auto auto;
+  gap: 4px;
+  height:100%;
+}
+.grid-container > div {
+    background-color: rgba(96, 128, 192, 0.2);
+    text-align: center;
+}
+
+.menuitem {
+    position: relative;
+    cursor: pointer;
+    padding: 4px;
+    background-color: rgba(128, 144, 224, 0.6);
+    border: 2px outset #8090e0;
+    width: 10em;
+    font-size:2vh;
+    margin: auto;
+}
+.menuitem:hover {
+    background-color: rgba(208, 224, 255, 0.6);
+}
+
+.main {
+    font-size: 36px;
+    height:100%;
+    font-size:2vw;
+}
+
+.style {
+    background-color: rgba(255, 224, 208, 0.6);
+}
+.artist {
+    background-color: rgba(224, 255, 208, 0.6);
+}
+.band {
+    background-color: rgba(255, 255, 224, 0.6);
+}
