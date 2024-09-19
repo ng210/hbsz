@@ -1,0 +1,4 @@
+{
+    "connectionstring": "Server=localhost;Port=3306;Database=gitar;Uid=root;Pwd=;",
+    "port":4000
+}
