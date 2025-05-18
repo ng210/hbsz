@@ -1,0 +1,4 @@
+1. Témaválasztás
+https://ddragon.leagueoflegends.com/cdn/14.22.1/data/en_US/champion.json
+- League of Legends: 169 bajnok
+- kártyánként 12+1 adat
