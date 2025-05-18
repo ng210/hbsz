@@ -1,0 +1,25 @@
+Player
+- név
+- IP cím
+- kártyák listája
+
+Card - LOL Champion
+- id
+- név
+- hp
+- hpregen
+- mp
+- mpregen
+- attackspeed
+- attackdamage
+- spellblock
+- armor
+- movespeed
+- attackrange
+- crit
+- image
+
+Game
+- játékosok listája
+- kör száma
+- házigazda játékos referenciája
