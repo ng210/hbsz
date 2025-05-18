@@ -1,0 +1,39 @@
+1. Témaválasztás
+- League of Legends: 169 bajnok
+- kártyánként 11 adat
+
+2. Adatszerkezetek és adatok
+- entitások:
+	- Player
+	- Card
+	- Game
+- adatszerkezet meghatározása (osztályok és kapcsolataik)
+- adatok letöltése: https://ddragon.leagueoflegends.com/cdn/14.22.1/data/en_US/champion.json
+- JsonConvert projekt: adatok átalakítása táblázat- vagy szövegszerkesztő, szkript vagy konzolos alkalmazással
+- adatbázis létrehozása és adatok importálása
+- C# osztályok implementálása
+
+3. Játék "forgatókönyve"
+- menüpontok, választási lehetőségek meghatározása
+- képernyők, párbeszéd ablakok, panelek, kontrollok meghatározása és látványterve
+- játék menetének, azaz a különböző szcenáriók és folyamatok leírása
+
+4. Implementáció
+- a grafikus felület elemeinek implementálása (WPF ablakok, kontrollok, stb.)
+- adatkötés (data binding), azaz a grafikus elemek és az adatok összekötése
+- a forgatókönyv szerinti folyamatok implementálása (játék logikájának osztályai)
+- integráció: a wpf és a logika osztályok felhasználása
+
+Opcionális elemek
+
+5. Hálózati kommunikáció
+- "szerver" oldal
+- kliens oldal
+
+6. Hangok
+- hangeffektek, zene kiválasztása, megalkotása
+- lejátszás
+
+7. Animáció
+- animációk megtervezése
+- saját vagy kész megoldás az animációk lejátszásához

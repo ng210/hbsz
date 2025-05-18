@@ -1,0 +1,35 @@
+1. Témaválasztás
+- legyen legalább 50 kártya
+- kártyánként legyen legalább 3 összehasonlítható adat
+
+2. Adatszerkezetek és adatok
+- adatszerkezet meghatározása (osztályok és kapcsolataik)
+- adatok letöltése vagy létrehozása
+- adatok átalakítása táblázat- vagy szövegszerkesztő, szkript vagy konzolos alkalmazással
+- adatbázis létrehozása és adatok importálása
+- C# osztályok implementálása
+
+3. Játék "forgatókönyve"
+- menüpontok, választási lehetőségek meghatározása
+- képernyők, párbeszéd ablakok, panelek, kontrollok meghatározása és látványterve
+- játék menetének, azaz a különböző szcenáriók és folyamatok leírása
+
+4. Implementáció
+- a grafikus felület elemeinek implementálása (WPF ablakok, kontrollok, stb.)
+- adatkötés (data binding), azaz a grafikus elemek és az adatok összekötése
+- a forgatókönyv szerinti folyamatok implementálása (játék logikájának osztályai)
+- integráció: a wpf és a logika osztályok felhasználása
+
+Opcionális elemek
+
+5. Hálózati kommunikáció
+- "szerver" oldal
+- kliens oldal
+
+6. Hangok
+- hangeffektek, zene kiválasztása, megalkotása
+- lejátszás
+
+7. Animáció
+- animációk megtervezése
+- saját vagy kész megoldás az animációk lejátszásához
