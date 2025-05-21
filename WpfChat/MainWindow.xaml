@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfChat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Simple TCP Chat" Height="350" Width="500">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Menu>
+            <MenuItem Header="File">
+                <MenuItem Header="Host"  Click="Host_Click"/>
+                <MenuItem Header="Connect" Click="Connect_Click"/>
+                <Separator />
+                <MenuItem Header="Exit" Click="Exit_Click"/>
+            </MenuItem>
+        </Menu>
+        <!-- Message list -->
+        <ListBox x:Name="MessageList" Grid.Row="1" Margin="0,0,0,10"/>
+
+        <!-- Input + send -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <TextBox x:Name="InputBox" Width="350" Height="25" Margin="0,0,10,0"/>
+            <Button Content="Send" Width="100" Click="Send_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
