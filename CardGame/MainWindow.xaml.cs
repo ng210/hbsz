@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CardGame.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,12 +21,18 @@ namespace CardGame
     /// </summary>
     public partial class MainWindow : Window
     {
-        HostWindow _hostWindow = new HostWindow();
-        ConnectWindow _connectWindow = new ConnectWindow();
-
+        Dictionary<string, Control> _controls;
         public MainWindow()
         {
             InitializeComponent();
+
+            _controls = new Dictionary<string, Control>
+            {
+                { "Main", new MainView() },
+                { "Host", new HostControl() },
+                { "Connect", new ConnectControl() },
+                { "Gallery", new GalleryControl() }
+            };
         }
 
         private void FileMenu_Click(object sender, RoutedEventArgs e)
@@ -33,10 +40,10 @@ namespace CardGame
             switch (((MenuItem)e.Source).Name)
             {
                 case "Host":
-                    _hostWindow.ShowDialog();
+                    MainContent.Content = _controls["Host"];
                     break;
                 case "Connect":
-                    _connectWindow.ShowDialog();
+                    MainContent.Content = _controls["Connect"];
                     break;
                 case "Exit":
                     Close();
@@ -44,6 +51,11 @@ namespace CardGame
                 default:
                     break;
             }
+        }
+
+        private void GalleryMenu_Click(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = _controls["Gallery"];
         }
     }
 }

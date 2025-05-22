@@ -3,18 +3,23 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CardGame"
+        xmlns:local="clr-namespace:CardGame.Controls"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Menu HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Top">
+    <Grid VerticalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Top">
             <MenuItem Header="File" Click="FileMenu_Click">
                 <MenuItem Name="Host" Header="Host..." />
                 <MenuItem Name="Connect" Header="Connect..." />
                 <Separator/>
                 <MenuItem Name="Exit" Header="Exit" />
             </MenuItem>
+            <MenuItem Header="Gallery" Click="GalleryMenu_Click" />
         </Menu>
-
+        <ContentControl Name="MainContent" Grid.Row="1" />
     </Grid>
 </Window>

@@ -10,18 +10,29 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CardGame
+namespace CardGame.Controls
 {
     /// <summary>
-    /// Interaction logic for HostWindow.xaml
+    /// Interaction logic for GalleryControl.xaml
     /// </summary>
-    public partial class HostWindow : Window
+    public partial class GalleryControl : UserControl
     {
-        public HostWindow()
+        public GalleryControl()
         {
             InitializeComponent();
+        }
+
+        private void Previous_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Next_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

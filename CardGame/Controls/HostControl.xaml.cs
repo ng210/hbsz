@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CardGame
+namespace CardGame.Controls
 {
     /// <summary>
-    /// Interaction logic for ConnectWindow.xaml
+    /// Interaction logic for HostControl.xaml
     /// </summary>
-    public partial class ConnectWindow : Window
+    public partial class HostControl : UserControl
     {
-        public ConnectWindow()
+        public HostControl()
         {
             InitializeComponent();
         }

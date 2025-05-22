@@ -55,11 +55,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="ConnectWindow.xaml">
+    <Page Include="Controls\CardControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="HostWindow.xaml">
+    <Page Include="Controls\ConnectControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\GalleryControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HostControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -71,11 +83,20 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ConnectWindow.xaml.cs">
-      <DependentUpon>ConnectWindow.xaml</DependentUpon>
+    <Compile Include="Controls\CardControl.xaml.cs">
+      <DependentUpon>CardControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="HostWindow.xaml.cs">
-      <DependentUpon>HostWindow.xaml</DependentUpon>
+    <Compile Include="Controls\ConnectControl.xaml.cs">
+      <DependentUpon>ConnectControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GalleryControl.xaml.cs">
+      <DependentUpon>GalleryControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HostControl.xaml.cs">
+      <DependentUpon>HostControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
