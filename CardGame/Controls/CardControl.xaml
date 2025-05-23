@@ -4,8 +4,54 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="400" d:DesignWidth="300">
+             d:DesignHeight="352" d:DesignWidth="256">
     <Grid Background="LightBlue">
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="64px" />
+            <RowDefinition Height="192px" />
+            <RowDefinition Height="96px" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="32px" />
+            <ColumnDefinition Width="192px" />
+            <ColumnDefinition Width="32px" />
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Content="{Binding Name}" HorizontalAlignment="Center" FontSize="20pt" />
+        <Image Grid.Row="1" Grid.Column="1" Source="{Binding Image}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Grid Grid.Row="2" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Health" Padding="0"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="{Binding Hp}" Padding="0"/>
+            <Label Grid.Row="0" Grid.Column="2" Content="Mana" Padding="0"/>
+            <Label Grid.Row="0" Grid.Column="3" Content="{Binding Mp}" Padding="0"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="HP Regen" Padding="0"/>
+            <Label Grid.Row="1" Grid.Column="1" Content="{Binding HpRegen}" Padding="0"/>
+            <Label Grid.Row="1" Grid.Column="2" Content="MP Regen" Padding="0"/>
+            <Label Grid.Row="1" Grid.Column="3" Content="{Binding MpRegen}" Padding="0"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="Atk Dmg" Padding="0"/>
+            <Label Grid.Row="2" Grid.Column="1" Content="{Binding AttackDamage}" Padding="0"/>
+            <Label Grid.Row="2" Grid.Column="2" Content="Atk Speed" Padding="0"/>
+            <Label Grid.Row="2" Grid.Column="3" Content="{Binding AttackSpeed}" Padding="0"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="Atk Range" Padding="0"/>
+            <Label Grid.Row="3" Grid.Column="1" Content="{Binding AttackRange}" Padding="0"/>
+            <Label Grid.Row="3" Grid.Column="2" Content="Speed" Padding="0"/>
+            <Label Grid.Row="3" Grid.Column="3" Content="{Binding MoveSpeed}" Padding="0"/>
+            <Label Grid.Row="4" Grid.Column="0" Content="Critical" Padding="0"/>
+            <Label Grid.Row="4" Grid.Column="1" Content="{Binding Crit}" Padding="0"/>
+            <Label Grid.Row="4" Grid.Column="2" Content="Armor" Padding="0"/>
+            <Label Grid.Row="4" Grid.Column="3" Content="{Binding Armor}" Padding="0"/>
+        </Grid>
     </Grid>
 </UserControl>

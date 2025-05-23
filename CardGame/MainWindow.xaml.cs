@@ -1,6 +1,10 @@
 ﻿using CardGame.Controls;
+using CardGame.DbAccess;
+using CardGame.Model;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,17 +26,45 @@ namespace CardGame
     public partial class MainWindow : Window
     {
         Dictionary<string, Control> _controls;
+        List<Card> _cardList;
+
+        private void ReadDataBase()
+        {
+            var connectionString = string.Empty;
+            foreach (ConnectionStringSettings cs in ConfigurationManager.ConnectionStrings)
+            {
+                if (cs.Name == "LolCards") connectionString = cs.ConnectionString;
+            }
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                _cardList = new DbCard(connection).Get();
+            }
+        }
+
         public MainWindow()
         {
             InitializeComponent();
 
-            _controls = new Dictionary<string, Control>
+            try
             {
-                { "Main", new MainView() },
-                { "Host", new HostControl() },
-                { "Connect", new ConnectControl() },
-                { "Gallery", new GalleryControl() }
-            };
+                ReadDataBase();
+                var galleryControl = new GalleryControl();
+                galleryControl.DataContext = _cardList;
+
+                _controls = new Dictionary<string, Control>
+                {
+                    { "Main", new MainView() },
+                    { "Host", new HostControl() },
+                    { "Connect", new ConnectControl() },
+                    { "Gallery", galleryControl }
+                };
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hiba", MessageBoxButton.OK);
+                Close();
+            }
         }
 
         private void FileMenu_Click(object sender, RoutedEventArgs e)

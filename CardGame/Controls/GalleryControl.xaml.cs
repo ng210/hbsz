@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CardGame.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,17 @@ namespace CardGame.Controls
     /// </summary>
     public partial class GalleryControl : UserControl
     {
+        private int _currentIndex = 0;
+
+        private List<Card> Cards
+        {
+            get => (List<Card>)DataContext;
+            set {
+                DataContext = value;
+                Card.DataContext = Cards[_currentIndex];
+            }
+        }
+
         public GalleryControl()
         {
             InitializeComponent();
@@ -27,12 +39,14 @@ namespace CardGame.Controls
 
         private void Previous_Click(object sender, RoutedEventArgs e)
         {
-
+            if (_currentIndex > 0) _currentIndex--;
+            Card.DataContext = Cards[_currentIndex];
         }
 
         private void Next_Click(object sender, RoutedEventArgs e)
         {
-
+            if (_currentIndex < Cards.Count-1) _currentIndex++;
+            Card.DataContext = Cards[_currentIndex];
         }
     }
 }
