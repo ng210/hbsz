@@ -56,8 +56,15 @@ namespace ConvertJson
             var list = Champion.ReadFromJson("lol-champions.json");
 
             // Checks(list);
-            DownloadImages(list);
-            CreateSql(list);
+            // DownloadImages(list);
+            // CreateSql(list);
+
+            var sb = new StringBuilder();
+            foreach (var ch in list)
+            {
+                sb.Append(ch.ToSqlUpdate() + "\n");
+            }
+            File.WriteAllText("champions-update.sql", sb.ToString());
         }
     }
 }

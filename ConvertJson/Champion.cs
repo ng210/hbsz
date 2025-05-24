@@ -13,6 +13,7 @@ namespace ConvertJson
     class Champion
     {
         public string Name { get; set; }
+        public string Description { get; set; }
         public int Hp { get; set; }
         public int Mp { get; set; }
         public int MoveSpeed { get; set; }
@@ -31,7 +32,7 @@ namespace ConvertJson
         static public List<Champion> ReadFromJson(string path)
         {
             var list = new List<Champion>();
-            var obj = JObject.Parse(File.ReadAllText(path));
+            var obj = JObject.Parse(File.ReadAllText(path, Encoding.UTF8));
             foreach (var ch in obj["data"].Values())
             {
                 list.Add(new Champion
@@ -41,6 +42,7 @@ namespace ConvertJson
                     AttackSpeed = ch["stats"].Value<float>("attackspeed"),
                     AttackRange = ch["stats"].Value<int>("attackrange"),
                     Crit = ch["stats"].Value<int>("crit"),
+                    Description = ch.Value<string>("blurb"),
                     Hp = ch["stats"].Value<int>("hp"),
                     HpRegen = ch["stats"].Value<float>("hpregen"),
                     MoveSpeed = ch["stats"].Value<int>("movespeed"),
@@ -66,6 +68,12 @@ namespace ConvertJson
                  "`crit`, `hp`, `hpregen`, `movespeed`, `mp`, `mpregen`," + 
                  "`name`, `spellblock`, `image`) VALUES" +
                 $"({Armor}, {AttackDamage}, {attackSpeed}, {AttackRange}, {Crit}, {Hp}, {hpRegen}, {MoveSpeed}, {Mp}, {mpRegen}, \"{Name}\", {SpellBlock}, FROM_BASE64('{Convert.ToBase64String(Image)}'));";
+        }
+
+        public string ToSqlUpdate()
+        {
+            return
+                $"UPDATE `card` SET `description`='{Description.Replace("'", "\\'")}' WHERE `name`='{Name.Replace("'", "\\'")}';";
         }
 
         public void DownloadImage()
