@@ -3,6 +3,7 @@
     public class Card
     {
         public string Name { get; set; }
+        public string Description { get; set; }
         public int Hp { get; set; }
         public int Mp { get; set; }
         public int MoveSpeed { get; set; }
