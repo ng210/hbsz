@@ -1,2 +1,2 @@
 # hbsz
-HBSZ tananyaghoz kapcsolódó programozási feladatok
+HBSZ tananyaghoz kapcsolódó segédletek és programozási feladatok
