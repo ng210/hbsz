@@ -1,20 +1,182 @@
-"Shelly","Damage Dealer",720,"Shotgun",2800,80),
-"Colt","Damage Dealer",800,"Pistols",2400,75),
-"Bull","Tank",600,"Shotgun",6000,85),
-"Jessie","Support",720,"Shooter",3200,70),
-"Brock","Damage Dealer",780,"Rocket Launcher",2400,78),
-"Darryl","Tank",760,"Shotgun",4000,70),
-"Poco","Support",740,"Guitar",3500,72),
-"Rico","Damage Dealer",720,"Bouncy Bullets",2600,65),
-"Bibi","Tank",720,"Baseball Bat",4000,68),
-"Emz","Damage Dealer",740,"Spray",3000,80),
-"Nita","Support",750,"Bear",3800,76),
-"Frank","Tank",600,"Hammer",5000,67),
-"Pam","Support",720,"Gatling Gun",4200,69),
-"Barley","Damage Dealer",720,"Bottles",2800,66),
-"Tick","Damage Dealer",780,"Mines",2500,60),
-"Leon","Assassin",800,"Revolver",2800,90),
-"Spike","Damage Dealer",720,"Cactus",2400,88),
-"Crow","Assassin",800,"Poisoned Daggers",2400,85),
-"Surge","Assassin",720,"Laser",3200,73),
-"Gale","Support",760,"Blasts",3000,74);
+[
+    {
+        "id": 1261,
+        "name": "Shelly",
+        "type": "Damage Dealer",
+        "speed": 720,
+        "weapon": "Shotgun",
+        "helth": 2800,
+        "popularity": 80
+    },
+    {
+        "id": 1262,
+        "name": "Colt",
+        "type": "Damage Dealer",
+        "speed": 800,
+        "weapon": "Pistols",
+        "helth": 2400,
+        "popularity": 75
+    },
+    {
+        "id": 1263,
+        "name": "Bull",
+        "type": "Tank",
+        "speed": 600,
+        "weapon": "Shotgun",
+        "helth": 6000,
+        "popularity": 85
+    },
+    {
+        "id": 1264,
+        "name": "Jessie",
+        "type": "Support",
+        "speed": 720,
+        "weapon": "Shooter",
+        "helth": 3200,
+        "popularity": 70
+    },
+    {
+        "id": 1265,
+        "name": "Brock",
+        "type": "Damage Dealer",
+        "speed": 780,
+        "weapon": "Rocket Launcher",
+        "helth": 2400,
+        "popularity": 78
+    },
+    {
+        "id": 1266,
+        "name": "Darryl",
+        "type": "Tank",
+        "speed": 760,
+        "weapon": "Shotgun",
+        "helth": 4000,
+        "popularity": 70
+    },
+    {
+        "id": 1267,
+        "name": "Poco",
+        "type": "Support",
+        "speed": 740,
+        "weapon": "Guitar",
+        "helth": 3500,
+        "popularity": 72
+    },
+    {
+        "id": 1268,
+        "name": "Rico",
+        "type": "Damage Dealer",
+        "speed": 720,
+        "weapon": "Bouncy Bullets",
+        "helth": 2600,
+        "popularity": 65
+    },
+    {
+        "id": 1269,
+        "name": "Bibi",
+        "type": "Tank",
+        "speed": 720,
+        "weapon": "Baseball Bat",
+        "helth": 4000,
+        "popularity": 68
+    },
+    {
+        "id": 1270,
+        "name": "Emz",
+        "type": "Damage Dealer",
+        "speed": 740,
+        "weapon": "Spray",
+        "helth": 3000,
+        "popularity": 80
+    },
+    {
+        "id": 1271,
+        "name": "Nita",
+        "type": "Support",
+        "speed": 750,
+        "weapon": "Bear",
+        "helth": 3800,
+        "popularity": 76
+    },
+    {
+        "id": 1272,
+        "name": "Frank",
+        "type": "Tank",
+        "speed": 600,
+        "weapon": "Hammer",
+        "helth": 5000,
+        "popularity": 67
+    },
+    {
+        "id": 1273,
+        "name": "Pam",
+        "type": "Support",
+        "speed": 720,
+        "weapon": "Gatling Gun",
+        "helth": 4200,
+        "popularity": 69
+    },
+    {
+        "id": 1274,
+        "name": "Barley",
+        "type": "Damage Dealer",
+        "speed": 720,
+        "weapon": "Bottles",
+        "helth": 2800,
+        "popularity": 66
+    },
+    {
+        "id": 1275,
+        "name": "Tick",
+        "type": "Damage Dealer",
+        "speed": 780,
+        "weapon": "Mines",
+        "helth": 2500,
+        "popularity": 60
+    },
+    {
+        "id": 1276,
+        "name": "Leon",
+        "type": "Assassin",
+        "speed": 800,
+        "weapon": "Revolver",
+        "helth": 2800,
+        "popularity": 90
+    },
+    {
+        "id": 1277,
+        "name": "Spike",
+        "type": "Damage Dealer",
+        "speed": 720,
+        "weapon": "Cactus",
+        "helth": 2400,
+        "popularity": 88
+    },
+    {
+        "id": 1278,
+        "name": "Crow",
+        "type": "Assassin",
+        "speed": 800,
+        "weapon": "Poisoned Daggers",
+        "helth": 2400,
+        "popularity": 85
+    },
+    {
+        "id": 1279,
+        "name": "Surge",
+        "type": "Assassin",
+        "speed": 720,
+        "weapon": "Laser",
+        "helth": 3200,
+        "popularity": 73
+    },
+    {
+        "id": 1280,
+        "name": "Gale",
+        "type": "Support",
+        "speed": 760,
+        "weapon": "Blasts",
+        "helth": 3000,
+        "popularity": 74
+    }
+]
