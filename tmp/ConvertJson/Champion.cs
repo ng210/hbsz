@@ -28,6 +28,9 @@ namespace ConvertJson
         public string ImageUrl { get; set; }
         public byte[] Image { get; set; }
 
+        public string Type { get; set; }
+        public int Magic { get; set; }
+
 
         static public List<Champion> ReadFromJson(string path)
         {
@@ -50,7 +53,9 @@ namespace ConvertJson
                     MpRegen = ch["stats"].Value<float>("mpregen"),
                     Name = ch.Value<string>("name"),
                     SpellBlock = ch["stats"].Value<int>("spellblock"),
-                    ImageUrl = ch["image"].Value<string>("full")
+                    ImageUrl = ch["image"].Value<string>("full"),
+                    Type = ch["tags"].First().Value<string>(),
+                    Magic = ch["info"].Value<int>("magic")
                 });
             }
 
@@ -83,6 +88,11 @@ namespace ConvertJson
             {
                 Image = client.DownloadData(new Uri($"{baseUrl}{ImageUrl}"));
             }
+        }
+
+        public string ToCsvLine()
+        {
+            return $"{Name};{Type};{Hp};{HpRegen:n2};{AttackDamage};{AttackSpeed:n2}";
         }
     }
 }

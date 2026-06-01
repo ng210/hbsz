@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace ConvertJson
 {
@@ -59,12 +60,17 @@ namespace ConvertJson
             // DownloadImages(list);
             // CreateSql(list);
 
-            var sb = new StringBuilder();
-            foreach (var ch in list)
-            {
-                sb.Append(ch.ToSqlUpdate() + "\n");
-            }
-            File.WriteAllText("champions-update.sql", sb.ToString());
+            //var sb = new StringBuilder();
+            //foreach (var ch in list)
+            //{
+            //    sb.Append(ch.ToSqlUpdate() + "\n");
+            //}
+            //File.WriteAllText("champions.csv", sb.ToString());
+
+            var lines = new List<string>();
+            lines.Add("Name;Type;Hp;HpRegen;AttackDamage;AttackSpeed");
+            lines.AddRange(list.Select(ch => ch.ToCsvLine()));
+            File.WriteAllLines("champions.csv", lines);
         }
     }
 }
