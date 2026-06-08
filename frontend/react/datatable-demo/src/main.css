@@ -2,13 +2,20 @@
     box-sizing: border-box;
 }
 
-html {
+body {
+    margin: 0;
     font-size: 12pt;
     text-shadow: 1px 2px 4px #0008;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #80e0ff, #404060);
 }
 
 h1 {
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
     text-align: center;
+    background: linear-gradient(to left, #fff8, #fff0);
 }
 
 .data-table {
@@ -16,26 +23,68 @@ h1 {
     flex-direction: column;
     width: 80%;
     margin: 0 auto;
+    background: #0002;
+    padding: 0.8rem;
+    border: ridge 2px #4684;
+    border-radius: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 4px 3px 4px #0008;
 }
+
+.data-table>h2 {
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    padding: 0;
+    text-align: center;
+    font-style: italic;
+}
+
 .data-table>div {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr 1fr 2fr 1fr 1fr;
+    grid-template-columns: 3fr 4fr 8fr 4fr 9fr 4fr 6fr;
 }
 
 .data-table>.head {
     background: #40608040;
 }
 
+.data-table>div>* {
+    cursor: pointer;
+    margin: 1px;
+
+}
+
 span.head {
     border: outset 1px #c0c0c080;
     padding: 2px;
     font-weight: bold;
-    font-size: 1.5rem;
-    letter-spacing: 0.2rem;
+    font-size: 1.2rem;
+    background-color: #fff6;
 }
 
 span.data {
-    border: inset 2px #c0c0c080;
-    background-color: #e0e0e0;
-    padding: 2px;
+    border: outset 1px #c0c0c080;
+    font-size: 1.0rem;
+    background-color: #88a6;
+}
+
+input.data {
+    width: 100%;
+    border: inset 1px #acf;
+    background-color: #e0f0ff;
+}
+
+progress.data {
+    width: 100%;
+    /* background-color: blue; */
+}
+
+@media screen and (width < 800px) {
+    html {
+        font-size: 10pt;
+    }
+
+    span.head {
+        font-size: 1.2rem;
+    }
 }

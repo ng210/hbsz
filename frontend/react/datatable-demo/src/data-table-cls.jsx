@@ -22,9 +22,22 @@ export default class DataTableCls extends Component {
         // semmi tennivaló
     }
 
+    onChangeSpeed(event, id) {
+        let speed = parseInt(event.target.value) || 0
+        if (speed > 1000) speed = 1000
+        this.setState({
+            data:
+                this.state.data.map(
+                    obj => obj.id == id ?
+                        {...obj, 'speed': speed} :
+                        obj)
+                })
+    }
+
     render() {
         return (
             <div className="data-table">
+                <h2>Class component</h2>
                 <div className="head">
                     <span className="head">id</span>
                     <span className="head">name</span>
@@ -36,15 +49,15 @@ export default class DataTableCls extends Component {
                 </div>
                 {
                     this.state.data.map(
-                        (br, ix) => (
-                            <div className="brawler" key={ix}>
+                        br => (
+                            <div className="brawler" key={br.id}>
                                 <span className="data">{br.id}</span>
                                 <span className="data">{br.name}</span>
                                 <span className="data">{br.type}</span>
-                                <span className="data">{br.speed}</span>
+                                <input className="data" placeholder="speed" value={br.speed} onChange={event => this.onChangeSpeed(event, br.id)}/>
                                 <span className="data">{br.weapon}</span>
                                 <span className="data">{br.health}</span>
-                                <span className="data">{br.popularity}</span>
+                                <progress className="data" max="100" value={br.popularity} title={br.popularity}/>
                             </div>
                         )
                     )
