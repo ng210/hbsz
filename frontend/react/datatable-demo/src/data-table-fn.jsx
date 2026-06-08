@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
 
 export default function DataTableFn({url}) {
-    const [userData, setUserData] = useState([])
+    const [data, setData] = useState([])
 
     useEffect(
         () => {
             fetch(url+'brawler')
             .then(resp => resp.json())
-            .then(content => setUserData(content))
+            .then(content => setData(content))
             .catch(err => alert('Hiba: '+err.message))
         },
         [])
@@ -24,7 +24,7 @@ export default function DataTableFn({url}) {
                 <span className="head">popularity</span>
             </div>
             {
-                userData.map(
+                data.map(
                     (br, ix) => (
                         <div className="brawler" key={ix}>
                             <span className="data">{br.id}</span>

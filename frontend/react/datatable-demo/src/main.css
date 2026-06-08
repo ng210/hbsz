@@ -19,7 +19,7 @@ h1 {
 }
 .data-table>div {
     display: grid;
-    grid-template-columns: 2fr 2fr 4fr 2fr 4fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 2fr 1fr 2fr 1fr 1fr;
 }
 
 .data-table>.head {
@@ -28,5 +28,14 @@ h1 {
 
 span.head {
     border: outset 1px #c0c0c080;
+    padding: 2px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+}
+
+span.data {
+    border: inset 2px #c0c0c080;
+    background-color: #e0e0e0;
     padding: 2px;
 }

@@ -2,19 +2,19 @@ import { Component } from 'react';
 
 export default class DataTableCls extends Component {
     state = {
-        userData: []
+        data: []
     }
 
     componentDidMount() {
         fetch(this.props.url + 'brawler')
             .then(resp => resp.json())
-            .then(content => this.setState({userData: content}))
+            .then(content => this.setState({data: content}))
             .catch(err => alert('Hiba: ' + err.message))
     }
 
     componentDidUpdate(prevProps, prevState) {
-        if (this.state.userData !== prevState.userData) {
-            console.log('userData')
+        if (this.state.data !== prevState.data) {
+            console.log('data')
         }
     }
 
@@ -35,7 +35,7 @@ export default class DataTableCls extends Component {
                     <span className="head">popularity</span>
                 </div>
                 {
-                    this.state.userData.map(
+                    this.state.data.map(
                         (br, ix) => (
                             <div className="brawler" key={ix}>
                                 <span className="data">{br.id}</span>
